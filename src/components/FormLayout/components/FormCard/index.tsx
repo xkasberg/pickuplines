@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import { Grid, Box, Input, Button, Typography} from '@mui/material/';
+import { Grid, Box, Input, Button} from '@mui/material/';
 import HotnessSlider from '../HotnessSlider';
 
 

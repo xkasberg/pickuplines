@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Grid, Container, Link, Typography} from '@mui/material';
 
 
-const NavBar: React.FC = () => {
+export default function NavBar () {
  return (
    <Box component="nav" position="absolute" top="0.25rem" width="100%">
      <Container>
@@ -28,6 +28,4 @@ const NavBar: React.FC = () => {
      </Container>
    </Box>
  );
-}
-
-export default NavBar
+};

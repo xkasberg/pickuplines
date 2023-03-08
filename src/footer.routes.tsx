@@ -3,9 +3,10 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const date = new Date().getFullYear();
+
 const logo = '../public/noun-laugh-2986877.svg';
 
-export default {
+const routes = {
   company: {
     href: "isomorphi.cloud",
     name: "isomorphi corporation",
@@ -39,3 +40,4 @@ export default {
   date: date
 };
 
+export default routes;

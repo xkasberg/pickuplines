@@ -1,4 +1,4 @@
-import {Box, Grid, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 import ResponseBody from './ResponseBody';
 

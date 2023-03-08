@@ -11,19 +11,16 @@ export default function Form ( Props:FormProps ) {
 
  return (
   <Box>
-
     <Grid container justifyContent="center" mb={4} mt={6}>
       <Grid item xs={12} md={6}>
         <Input placeholder="crushes name..." fullWidth />
       </Grid>
     </Grid>
-
     <Grid container justifyContent="center" mb={2}>
       <Grid item xs={12} md={6}>
         <HotnessSlider />
       </Grid>
     </Grid>
-
     <Grid container justifyContent="center" mb={4}>
       <Grid item xs={12} md={6}>
         <Input
@@ -34,7 +31,6 @@ export default function Form ( Props:FormProps ) {
         />
       </Grid>
     </Grid>
-
     <Grid container justifyContent="center" mb={2}>
       <Grid item xs={12} md={6}>
         <Input
@@ -45,7 +41,6 @@ export default function Form ( Props:FormProps ) {
         />
       </Grid>
     </Grid>
-
     <Grid container justifyContent="center" mb={4} mt={4}>
         <Button
           variant="outlined"
@@ -55,7 +50,6 @@ export default function Form ( Props:FormProps ) {
           Generate
         </Button>
     </Grid>
-
   </Box>
  )
 };

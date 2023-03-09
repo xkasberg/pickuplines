@@ -1,15 +1,27 @@
 import {Box, Typography} from "@mui/material";
+import { forwardRef } from "react";
 
-import ResponseBody from './ResponseBody';
 
-export default function PickuplineCard () {
+interface CardProps {
+ data: string;
+}
+
+const PickuplineCard = forwardRef<HTMLElement, CardProps>((props, ref) => {
+ 
+ const {data} = props;
+
  return (
-  <Box component="section" justifyContent="center">
-   <Typography color="pink">
-    Try this one out...
-   </Typography>
-   <ResponseBody responseBody={"hello there"} />
+ <Box component="section" justifyContent="center">
+  <Typography color="pink">
+   Try this one out...
+  </Typography>
+  <Typography>
+   {data}
+  </Typography>
 
-  </Box>
- )
-};
+ </Box>
+)
+
+});
+
+export default PickuplineCard;

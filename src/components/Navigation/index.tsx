@@ -1,7 +1,5 @@
 
-import React from 'react';
 import { Box, Grid, Container, Link, Typography} from '@mui/material';
-
 
 export default function NavBar () {
  return (

@@ -1,3 +1,4 @@
+import React, { forwardRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
@@ -91,9 +92,13 @@ const IOSSlider = styled(Slider)(({ theme }) => ({
  },
 }));
 
+interface SliderProps {
+  hotnessRef:React.RefObject<HTMLInputElement>;
+}
 
-export default function HotnessSlider() {
- return (
+const HotnessSlider = forwardRef<HTMLFormElement, SliderProps>((props, ref) => {
+
+  return (
    <Box sx={{ width:"100%" }}>
      <Typography gutterBottom color={theme.palette.text.disabled}>crushes hotness...</Typography>
      <IOSSlider 
@@ -103,9 +108,10 @@ export default function HotnessSlider() {
       step={1}
       defaultValue={5}
       marks={marks}
-      valueLabelDisplay="on"    
+      valueLabelDisplay="on"  
      />
    </Box>
- )
-};
+  )
+});
 
+export default HotnessSlider;

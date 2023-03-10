@@ -35,7 +35,7 @@ function Footer( content:Props ) {
     ));
 
   return (
-    <Box width="100%" position="fixed" bottom="1.625rem" mt={4}>
+    <Box width="100%" position="relative" bottom="1.625rem">
       <Container>
         <Box
           component="footer"
@@ -45,6 +45,7 @@ function Footer( content:Props ) {
           display="flex"
           flexWrap="wrap"
           fontWeight="light"
+          fontSize=".875rem"
         >
           <Box
             display="flex"
@@ -54,14 +55,11 @@ function Footer( content:Props ) {
             color={light ? "pink" : "text"}
             textTransform={"none"}
             fontWeight="light"
+            fontSize="inherit"
           >
-            &copy; {date}
-            <Box fontSize="inherit" color={light ? "pink" : "text"} mb={-0.5} mx={0.25}>
-              <Icon color="inherit" fontSize="inherit">       
-              </Icon>
-            </Box>
-            <Link href= "isomorphi.cloud" target="_blank">
-              <Typography variant="button" fontWeight="light" color={light ? "pink" : "dark"} textTransform={"none"}>
+            &copy; {date} 
+            <Link href="isomorphi.cloud" target="_blank">
+              <Typography variant="button" fontWeight="light" color={light ? "pink" : "dark"} textTransform={"none"} marginLeft={"5px"}>
                 {company.name} 
               </Typography>
             </Link>
@@ -74,7 +72,6 @@ function Footer( content:Props ) {
               alignItems: "center",
               justifyContent: "center",
               listStyle: "none",
-              mt: 3,
               mb: 0,
               p: 0,
               [breakpoints.values.lg]: {

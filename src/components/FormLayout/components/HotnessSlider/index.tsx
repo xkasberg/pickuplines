@@ -2,7 +2,11 @@ import React, { forwardRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
-import theme from '../../../../theme';
+import { grey } from '@mui/material/colors';
+
+import colors from '../../../../theme/base/colors';
+
+const { text } = colors;
 
 const marks = [
  {
@@ -100,7 +104,7 @@ const HotnessSlider = forwardRef<HTMLFormElement, SliderProps>((props, ref) => {
 
   return (
    <Box sx={{ width:"100%" }}>
-     <Typography gutterBottom color={theme.palette.common.black}>crushes hotness...</Typography>
+     <Typography gutterBottom color={"#ACB2BE"}  fontSize=".875rem">crushes hotness...</Typography>
      <IOSSlider 
       aria-label="ios slider"
       max={10}

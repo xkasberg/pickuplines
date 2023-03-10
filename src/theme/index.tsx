@@ -14,7 +14,6 @@ import rgba from "./functions/rgba";
 
 import input from './components/input';
 
-// A custom theme for this app
 const theme = createTheme({
 
   functions:{
@@ -23,13 +22,11 @@ const theme = createTheme({
    pxToRem,
    rgba
   },
-  
   palette: { ...colors},
   typography: { ...typography},
   breakpoints: { ...breakpoints },
   borders: { ...borders},
   boxShadows: { ...boxShadows },
-
   components: {
    MuiCssBaseline: {
      styleOverrides: {

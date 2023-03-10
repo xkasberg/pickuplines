@@ -48,8 +48,6 @@ export default function FormLayout() {
           container
           item
           justifyContent="center"
-          xs={12}
-          lg={8}
           sx={{ mx: "auto" }}
         >
           <Box width="100%" component="form" method="post" border={1} borderRadius='16px' borderColor='pink'>

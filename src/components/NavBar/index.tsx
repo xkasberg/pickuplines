@@ -3,7 +3,7 @@ import { Box, Grid, Container, Link, Typography} from '@mui/material';
 
 export default function NavBar () {
  return (
-   <Box component="nav" position="fixed" top="0.25rem" width="100%">
+   <Box component="nav" position="absolute" top="0.25rem" width="100%">
      <Container>
        <Grid container flexDirection="row" alignItems="center">
          <Typography

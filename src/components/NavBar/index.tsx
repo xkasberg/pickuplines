@@ -11,7 +11,7 @@ export default function NavBar () {
            href="/"
            variant="button"
            color="pink"
-           fontWeight="light"
+           fontWeight="regular"
            textTransform={"none"}
            py={0.8125}
            mr={2}

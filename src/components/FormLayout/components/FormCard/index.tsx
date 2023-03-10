@@ -19,7 +19,7 @@ const Form = forwardRef<HTMLFormElement, FormProps>((props, ref) => {
   <Box>
     <Grid container justifyContent="center" mb={4} mt={6}>
       <Grid item xs={12} md={6}>
-        <Input placeholder="crushes name..." fullWidth inputRef={nameRef}/>
+        <Input placeholder="crushes name..." fullWidth required={true} inputRef={nameRef} />
       </Grid>
     </Grid>
     <Grid container justifyContent="center" mb={2}>
@@ -52,7 +52,7 @@ const Form = forwardRef<HTMLFormElement, FormProps>((props, ref) => {
     <Grid container justifyContent="center" mb={4} mt={4}>
         <Button
           variant="outlined"
-          color="secondary"
+          color="success"
           onClick={submitHandler}
         >
           Generate

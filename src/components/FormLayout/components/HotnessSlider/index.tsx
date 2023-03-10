@@ -100,7 +100,7 @@ const HotnessSlider = forwardRef<HTMLFormElement, SliderProps>((props, ref) => {
 
   return (
    <Box sx={{ width:"100%" }}>
-     <Typography gutterBottom color={theme.palette.text.disabled}>crushes hotness...</Typography>
+     <Typography gutterBottom color={theme.palette.common.black}>crushes hotness...</Typography>
      <IOSSlider 
       aria-label="ios slider"
       max={10}

@@ -16,7 +16,7 @@ export default function FormLayout() {
   const [submit, setSubmit] = useState(false);
   const [data, setData] = useState('');
 
-  const ws = new WebSocket("ws://localhost:8000/generate");
+  const ws = new WebSocket("wss://api.isomorphi.cloud/generate");
   
   const handleWebSocketMessage = (event:MessageEvent) => {
     const token = event.data;
@@ -42,22 +42,20 @@ export default function FormLayout() {
   }
 
   return (
-    <Box component="section" justifyContent="center" py={12}>
+    <Box component="section" justifyContent="center" py={12} mb={1}>
       <Container>
-        <Box >
-          <Grid
-            container
-            item
-            justifyContent="center"
-            xs={12}
-            lg={8}
-            sx={{ mx: "auto" }}
-          >
-            <Box width="100%" component="form" method="post" border={1} borderRadius='16px' borderColor='pink' >
-                { submit ? <PickuplineCard data={data} /> : <FormCard nameRef={nameInputRef} bioRef={bioInputRef} infoRef={infoInputRef} hotnessRef={hotnessInputRef} submitHandler={handleSubmit} /> } 
-            </Box>
-          </Grid>
-        </Box>
+        <Grid
+          container
+          item
+          justifyContent="center"
+          xs={12}
+          lg={8}
+          sx={{ mx: "auto" }}
+        >
+          <Box width="100%" component="form" method="post" border={1} borderRadius='16px' borderColor='pink'>
+              { submit ? <PickuplineCard data={data} /> : <FormCard nameRef={nameInputRef} bioRef={bioInputRef} infoRef={infoInputRef} hotnessRef={hotnessInputRef} submitHandler={handleSubmit} /> } 
+          </Box>
+        </Grid>
       </Container>
     </Box>
   );

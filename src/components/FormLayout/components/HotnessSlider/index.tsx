@@ -2,11 +2,6 @@ import React, { forwardRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
-import { grey } from '@mui/material/colors';
-
-import colors from '../../../../theme/base/colors';
-
-const { text } = colors;
 
 const marks = [
  {

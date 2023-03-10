@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Box, Container, Link, Typography, Icon} from '@mui/material';
+import { Box, Container, Link, Typography} from '@mui/material';
 
 type NavLink = {
   href:string;

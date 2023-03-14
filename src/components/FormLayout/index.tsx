@@ -26,12 +26,16 @@ export default function FormLayout() {
   ws.addEventListener('message', handleWebSocketMessage);
   
   function handleSubmit(e: FormEvent) {
+
     e.preventDefault();
-    setSubmit(true);
     const enteredName = nameInputRef.current?.value;
     const enteredBio = bioInputRef.current?.value;
     const enteredInfo = infoInputRef.current?.value;
     const enteredHotness = hotnessInputRef.current?.value;
+    
+
+    setSubmit(true);
+
     const formData = {
       name: enteredName,
       bio: enteredBio,
@@ -39,6 +43,8 @@ export default function FormLayout() {
       hotness: enteredHotness
     }
     ws.send(JSON.stringify(formData));
+    
+
   }
 
   return (
@@ -50,7 +56,7 @@ export default function FormLayout() {
           justifyContent="center"
           sx={{ mx: "auto" }}
         >
-          <Box width="100%" component="form" method="post" border={1} borderRadius='16px' borderColor='pink'>
+          <Box width="100%" component="form" method="post" border={0} borderRadius='16px' borderColor=''>
               { submit ? <PickuplineCard data={data} /> : <FormCard nameRef={nameInputRef} bioRef={bioInputRef} infoRef={infoInputRef} hotnessRef={hotnessInputRef} submitHandler={handleSubmit} /> } 
           </Box>
         </Grid>

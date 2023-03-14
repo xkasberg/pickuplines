@@ -27,7 +27,7 @@ function Footer( content:Props ) {
         lineHeight={1}
       >
         <Link href={link.href}>
-          <Typography variant="button" fontWeight="light" color={light ? "pink" : "text"} textTransform={"none"}>
+          <Typography variant="button" fontWeight="regular" color={light ? "pink" : "text"} textTransform={"none"}>
             {link.name}
           </Typography>
         </Link>
@@ -44,7 +44,7 @@ function Footer( content:Props ) {
           alignItems="center"
           display="flex"
           flexWrap="wrap"
-          fontWeight="light"
+          fontWeight="regular"
           fontSize=".875rem"
         >
           <Box
@@ -54,12 +54,12 @@ function Footer( content:Props ) {
             flexWrap="wrap"
             color={light ? "pink" : "text"}
             textTransform={"none"}
-            fontWeight="light"
+            fontWeight="regular"
             fontSize="inherit"
           >
             &copy; {date} 
             <Link href="isomorphi.cloud" target="_blank">
-              <Typography variant="button" fontWeight="light" color={light ? "pink" : "dark"} textTransform={"none"} marginLeft={"5px"}>
+              <Typography variant="button" fontWeight="regular" color={light ? "pink" : "dark"} textTransform={"none"} marginLeft={"5px"}>
                 {company.name} 
               </Typography>
             </Link>
